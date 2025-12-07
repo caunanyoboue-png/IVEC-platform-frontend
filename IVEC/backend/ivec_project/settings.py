@@ -107,4 +107,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
-AUTH_USER_MODEL = 'users.User'
+# ensure custom user model reference matches app label
+AUTH_USER_MODEL = 'apps.users.User'
