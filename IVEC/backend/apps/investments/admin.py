@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import Investment, Transaction
+from .models import Investor, Transaction
 
-@admin.register(Investment)
-class InvestmentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'capital', 'interest_rate', 'created_at', 'updated_at')
-    search_fields = ('id', 'capital', 'interest_rate')
+@admin.register(Investor)
+class InvestorAdmin(admin.ModelAdmin):
+    list_display = ('user', 'capital_balance', 'created_at')
+    search_fields = ('user__username', 'user__email')
 
 @admin.register(Transaction)
 class TransactionAdmin(admin.ModelAdmin):
-    list_display = ('id', 'investment', 'amount', 'transaction_type', 'created_at')
-    list_filter = ('transaction_type',)
-    search_fields = ('id', 'investment__id', 'amount')
+    list_display = ('investor', 'type', 'amount', 'status', 'created_at')
+    list_filter = ('type', 'status')
+    search_fields = ('investor__user__username',)

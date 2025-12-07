@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+venv.bak/
+
+# Django / local files
+db.sqlite3
+*.log
+local_settings.py
+settings_local.py
+media/
+staticfiles/
+*.pot
+
+# Do NOT ignore migrations (keep them under version control)
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Node / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+build/
+dist/
+.cache/
+.parcel-cache/
+
+# React build folder
+frontend/build/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets / env
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+secret_key.txt
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+logs/
+*.log
+
+# Misc
+*.sqlite3
+*.pid
+*.seed
